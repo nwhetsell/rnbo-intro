@@ -157,7 +157,7 @@ In the plug-in’s UI, there’s a Preset menu with items named “smooth”, �
 
 ### Exporting WebAssembly
 
-Finally, let’s export the RNBO patch as WebAssembly that can run in a webpage. To do this, you’ll need to [create a GitHub account](https://github.com/signup), and then create a copy of [Cycling&nbsp;’74’s RNBO website repository](https://github.com/Cycling74/rnbo.example.webpage) by clicking “Use this template” > “Create a new repository”. Download this repository to your computer by using the free [GitHub Desktop](https://desktop.github.com) app, and then open a [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) (on Windows, you can use [PowerShell](https://learn.microsoft.com/en-us/powershell/)) to the repository folder.
+Finally, let’s export the RNBO patch as WebAssembly that can run in a webpage. To do this, you’ll need to [create a GitHub account](https://github.com/signup), and then create a copy of [Cycling&nbsp;’74’s RNBO website repository](https://github.com/Cycling74/rnbo.example.webpage) by clicking “Use this template” > “Create a new repository”. Download this repository to your computer by using the free [GitHub Desktop](https://desktop.github.com) app, and then open a [Terminal](https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac) (or [PowerShell](https://learn.microsoft.com/en-us/powershell/) on Windows) to the repository folder.
 
 Before continuing, you should install [Node.js](https://nodejs.org) (you only need to do this once). The simplest way to do this on Mac is to install [Homebrew](https://brew.sh) and then run
 
