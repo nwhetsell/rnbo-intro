@@ -145,7 +145,7 @@ Now that we understand the RNBO patch, let’s export it so that we can use it o
 
 ### Exporting an Audio Unit
 
-First, we’ll export the RNBO patch as an Audio Unit. To do this, click the Export Sidebar button (looks like a document with ) to open the [Export Sidebar](https://rnbo.cycling74.com/learn/rnbo-export-sidebar-overview), and then double-click Audio Plugin Export. Select “AU Mac” from the Format and Platform menu, and choose
+First, we’ll export the RNBO patch as an Audio Unit. To do this, click the Export Sidebar button (looks like a document with →) to open the [Export Sidebar](https://rnbo.cycling74.com/learn/rnbo-export-sidebar-overview), and then double-click Audio Plugin Export. Select “AU Mac” from the Format and Platform menu, and choose
 
 ```
 ~/Library/Audio/Plug-Ins/Components
