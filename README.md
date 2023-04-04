@@ -10,7 +10,7 @@ As with Gen, you use RNBO by creating a [rnbo~](https://docs.cycling74.com/lates
 
 ## Getting Started with RNBO
 
-Most people will probably get started with RNBO by opening Cycling&nbsp;’74’s RNBO intro patch from the [RNBO Quickstart](https://rnbo.cycling74.com/learn/quickstart). This patch may seem overwhelming, but breaking it down will help us understand what RNBO is and how to use it.
+Most people will probably get started with RNBO by opening Cycling&nbsp;’74’s RNBO intro patch, either from the [RNBO Quickstart](https://rnbo.cycling74.com/learn/quickstart) or by choosing Extras&nbsp;> RNBO Intro in Max. This patch may seem overwhelming, but breaking it down will help us understand what RNBO is and how to use it.
 
 ### start automation ①, adjust gain ②
 
