@@ -96,7 +96,7 @@ This means that to compute the output at sample $n$, we take $x[n]$ (the input a
 $$
 \begin{align}
 \omega_0 &= f_0 \times 2 \pi / F_s = 2 \pi \frac{f_0}{F_s} \\
-\alpha &= \sin \omega_0 \times 0.5 / Q = \frac{\sin \omega_0}{2 Q}
+\alpha &= \sin\thinspace \omega_0 \times 0.5 / Q = \frac{\sin\thinspace \omega_0}{2 Q}
 \end{align}
 $$
 
@@ -104,11 +104,11 @@ The _Audio EQ Cookbook_ then [gives](https://webaudio.github.io/Audio-EQ-Cookboo
 
 $$
 \begin{align}
-b_0 &= \frac{1 - \cos \omega_0}{2} \\
-b_1 &= 1 - \cos \omega_0 \\
-b_2 &= \frac{1 - \cos \omega_0}{2} \\
+b_0 &= \frac{1 - \cos\thinspace \omega_0}{2} \\
+b_1 &= 1 - \cos\thinspace \omega_0 \\
+b_2 &= \frac{1 - \cos\thinspace \omega_0}{2} \\
 a_0 &= 1 + \alpha \\
-a_1 &= -2 \cos \omega_0 \\
+a_1 &= -2 \cos\thinspace \omega_0 \\
 a_2 &= 1 - \alpha
 \end{align}
 $$
@@ -117,15 +117,15 @@ $$
 
 $$
 \begin{align}
-\texttt{out1} &= \texttt{a0} = \texttt{a2} = \frac{1 - \cos \omega_0}{2} \times \texttt{b0} = \frac{1 - \cos \omega_0}{2} \times \frac{1}{1 + \alpha} = \frac{b_0}{a_0} \\
-\texttt{out2} &= \texttt{a1} = (1 - \cos \omega_0) \times \texttt{b0} = (1 - \cos \omega_0) \times \frac{1}{1 + \alpha} = \frac{b_1}{a_0} \\
-\texttt{out3} &= \texttt{a2} = \frac{b_0}{a_0} = \frac{b_2}{a_0} \\
-\texttt{out4} &= \texttt{b1} = -2 \cos \omega_0 \times \texttt{b0} = -2 \cos \omega_0 \times \frac{1}{1 + \alpha} = \frac{a_1}{a_0} \\
-\texttt{out5} &= \texttt{b2} = (1 - \alpha) \times \texttt{b0} = (1 - \alpha) \times \frac{1}{1 + \alpha} = \frac{a_2}{a_0}
+𝚘𝚞𝚝𝟷 &= 𝚊𝟶 = 𝚊𝟸 = \frac{1 - \cos\thinspace \omega_0}{2} \times 𝚋𝟶 = \frac{1 - \cos\thinspace \omega_0}{2} \times \frac{1}{1 + \alpha} = \frac{b_0}{a_0} \\
+𝚘𝚞𝚝𝟸 &= 𝚊𝟷 = (1 - \cos\thinspace \omega_0) \times 𝚋𝟶 = (1 - \cos\thinspace \omega_0) \times \frac{1}{1 + \alpha} = \frac{b_1}{a_0} \\
+𝚘𝚞𝚝𝟹 &= 𝚊𝟸 = \frac{b_0}{a_0} = \frac{b_2}{a_0} \\
+𝚘𝚞𝚝𝟺 &= 𝚋𝟷 = -2 \cos\thinspace \omega_0 \times 𝚋𝟶 = -2 \cos\thinspace \omega_0 \times \frac{1}{1 + \alpha} = \frac{a_1}{a_0} \\
+𝚘𝚞𝚝𝟻 &= 𝚋𝟸 = (1 - \alpha) \times 𝚋𝟶 = (1 - \alpha) \times \frac{1}{1 + \alpha} = \frac{a_2}{a_0}
 \end{align}
 $$
 
-(Unfortunately, Cycling&nbsp;’74 chose very confusing variable names. `a0`, `a1`, `a2`, `b0`, `b1`, and `b2` in the codebox are _not_ the same as $a_0$, $a_1$, $a_2$, $b_0$, $b_1$, and $b_2$ in the _Audio EQ Cookbook_.) These outputs are sent to yet another gen object titled “biquad” that performs filtering with the coefficients calculated in the codebox.
+(Unfortunately, Cycling&nbsp;’74 chose very confusing variable names. 𝚊𝟶, 𝚊𝟷, 𝚊𝟸, 𝚋𝟶, 𝚋𝟷, and 𝚋𝟸 in the codebox are _not_ the same as $a_0$, $a_1$, $a_2$, $b_0$, $b_1$, and $b_2$ in the _Audio EQ Cookbook_.) These outputs are sent to yet another gen object titled “biquad” that performs filtering with the coefficients calculated in the codebox.
 
 Returning to the feedback-fm Gen patcher window, we can now see how the overblow (passed as in&nbsp;2) and harmonics (in&nbsp;3) parameters are used. The “overblow” parameter is really a gain applied to the output of the lowpass filters before it’s used for phase modulation. The “harmonics” parameter is used to calculate the cutoff frequency of the lowpass filters (by simply multiplying by the input frequency). (Recall that the harmonics parameter was restricted to integers in the Automation subpatcher. Since “harmonics” is actually a filter cutoff frequency, this restriction is unnecessary; the value of “harmonics” can smoothly vary without introducing inharmonic frequencies.)
 
